@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+header, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+  text-align: center;
+  font-size: 64px;
+  color: #FF6666;
+  padding: 50px 50px 100px 50px;
+}
+
+#textfield input {
+  text-align: left;
+  width: 70%;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent:18px;
+  border-radius: 5px;
+  border: 1px;
+  outline: none;
+  background: #e5e5e5;
+}
+
+#textfield {
+  text-align: center;
+  width: 100%;
+}
+
+#footer {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 12px;
+}
+
+#todolist li {
+  width:70%;
+  height: 50px;
+  background: #e5e5e5;
+  list-style: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 18px;
+  border-radius:5px;
+  border:1px;
+  outline:none;
+  text-align: left;
+}
+
+#todolist {
+  text-align: center;
+  padding:0px;
+}
