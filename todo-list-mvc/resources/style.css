@@ -37,7 +37,7 @@ header {
 
 #todolist li {
   width:70%;
-  height: 50px;
+  height: 30px;
   background: #e5e5e5;
   list-style: none;
   display: inline-block;
@@ -49,6 +49,11 @@ header {
   outline:none;
   text-align: left;
 }
+
+#todolist li button {
+  float: right;
+}
+
 
 #todolist {
   text-align: center;
