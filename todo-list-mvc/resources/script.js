@@ -1,14 +1,22 @@
 todos = [];
 
+
 function displayTodos() {
   var todosList = document.querySelector('ul');
   todosList.innerHTML = "";
   for(var i = 0; i < todos.length; i++) {
     var todoLi = document.createElement('li');
     var todo = todos[i];
-    todoLi.textContent = todo.todoText;
+//    todoLi.textContent = todo.todoText;
+    todoLi.innerHTML = todo.todoText + "<button class='delete-button' onclick='deleteTodo(id)' id="+ i +">Delete</button>"
+    console.log(todoLi);
     todosList.appendChild(todoLi);
   }
+};
+
+function deleteTodo(id) {
+  todos.splice(id, 1);
+  displayTodos();
 };
 
 function addTodo() {
