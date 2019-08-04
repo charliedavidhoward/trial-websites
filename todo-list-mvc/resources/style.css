@@ -12,6 +12,9 @@ header {
 }
 
 #textfield input {
+}
+
+.addTodo {
   text-align: left;
   width: 70%;
   height: 30px;
@@ -22,6 +25,15 @@ header {
   border: 1px;
   outline: none;
   background: #e5e5e5;
+  position: relative;
+  left: 10px;
+}
+
+#inputfield {
+  background: #e5e5e5;
+  width: 70%;
+  display: inline-block;
+  text-align: left;
 }
 
 #textfield {
@@ -37,7 +49,7 @@ header {
 
 #todolist li {
   width:70%;
-  height: 30px;
+  height: 50px;
   background: #e5e5e5;
   list-style: none;
   display: inline-block;
@@ -48,14 +60,65 @@ header {
   border:1px;
   outline:none;
   text-align: left;
+  position: relative;
 }
 
-#todolist li button {
+#todolist li .todoText {
+  position: relative;
+}
+
+#todolist li .completeButton {
+  float: left;
+}
+
+.complete-button {
+  float: left;
+  margin-right: 5%;
+  margin-left: 1%;
+}
+
+.delete-button {
   float: right;
+  margin-right: 1%;
+  margin-left: 5%;
+}
+
+.deleteTodo {
+  float: right;
+}
+
+.completeTodo {
+  width: 100%;
 }
 
 
 #todolist {
   text-align: center;
   padding:0px;
+}
+
+#completedText {
+  text-decoration:line-through;
+}
+
+.complete-button {
+  width: 30px;
+  height: 30px;
+}
+
+.uncomplete-button {
+  width: 30px;
+  height: 30px;
+}
+
+.delete-button {
+  width: 30px;
+  height: 30px;
+  background: none;
+}
+
+.complete-all {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
 }
