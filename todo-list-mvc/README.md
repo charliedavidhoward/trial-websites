@@ -2,5 +2,6 @@
 Implementation of http://todomvc.com/
 
 To add:
-  - complete/incomplete checkbox
-  - selectors for 'All', 'Active', 'Completed'
+  - fix formatting problems
+  - improve display of footer buttons
+  - add ability to edit individual todo by clicking on text
