@@ -43,7 +43,6 @@ function completeTodo(id) {
   }
   if (completed == todos.length) {
     var completedArrow = document.getElementById("toggle-completed");
-    console.log(completedArrow);
     completedArrow.innerHTML = "<input type='image' src='resources/icons/all-completed-down.png' class='complete-all' onclick='uncompleteAll()'>"
   }
   view.displayTodos();
@@ -94,6 +93,19 @@ $("#addTodo").on('keyup', function(e) {
   };
 });
 
+$('#0').click(function(){
+  var name = $(this).text();
+  $(this).html('');
+  $('<input></input>').attr({
+    'type': 'text',
+    'name': 'fname',
+    'id': 'text_fullname',
+    'size': '30',
+    'value': name
+  }).appendTo('#0');
+  $('#text_fullname').focus();
+});
+
 var view = {
   displayTodos: function() {
   var todosList = document.querySelector('ul');
@@ -136,13 +148,13 @@ var view = {
       }
     }
     if (amount_left == 1 && completed_todos > 0) {
-      todoFooter.innerHTML = "<button class='remove-completed' onclick='removeCompleted()'>Remove Completed</button><button class='display-completed' onclick='displayCompleted()'>Display Completed</button><button class='display-uncompleted' onclick='displayUncompleted()'>Display Uncompleted</button><button class='display-all' onclick='displayAll()'>Display All</button><p>" + amount_left + " item to complete</p>";
+      todoFooter.innerHTML = "<div id='footer-buttons'><button class='remove-completed' onclick='removeCompleted()'>Remove Completed</button><button class='display-completed' onclick='displayCompleted()'>Display Completed</button><button class='display-uncompleted' onclick='displayUncompleted()'>Display Uncompleted</button><button class='display-all' onclick='displayAll()'>Display All</button><p id ='counter'>" + amount_left + " item to complete</p></div>";
     } else if (amount_left == 1 && completed_todos == 0) {
-      todoFooter.innerHTML = "<button class='display-completed' onclick='displayCompleted()'>Display Completed</button><button class='display-uncompleted' onclick='displayUncompleted()'>Display Uncompleted</button><button class='display-all' onclick='displayAll()'>Display All</button><p>" + amount_left + " items to complete</p>";
+      todoFooter.innerHTML = "<div id='footer-buttons'><button class='display-completed' onclick='displayCompleted()'>Display Completed</button><button class='display-uncompleted' onclick='displayUncompleted()'>Display Uncompleted</button><button class='display-all' onclick='displayAll()'>Display All</button><p id='counter'>" + amount_left + " items to complete</p></div>";
     } else if (amount_left != 1 && completed_todos > 0) {
-      todoFooter.innerHTML = "<button class='remove-completed' onclick='removeCompleted()'>Remove Completed</button><button class='display-completed' onclick='displayCompleted()'>Display Completed</button><button class='display-uncompleted' onclick='displayUncompleted()'>Display Uncompleted</button><button class='display-all' onclick='displayAll()'>Display All</button><p>" + amount_left + " items to complete</p>";
+      todoFooter.innerHTML = "<div id='footer-buttons'><button class='remove-completed' onclick='removeCompleted()'>Remove Completed</button><button class='display-completed' onclick='displayCompleted()'>Display Completed</button><button class='display-uncompleted' onclick='displayUncompleted()'>Display Uncompleted</button><button class='display-all' onclick='displayAll()'>Display All</button><p id='counter'>" + amount_left + " items to complete</p></div>";
     } else if (amount_left !=1 && completed_todos == 0) {
-      todoFooter.innerHTML = "<button class='display-completed' onclick='displayCompleted()'>Display Completed</button><button class='display-uncompleted' onclick='displayUncompleted()'>Display Uncompleted</button><button class='display-all' onclick='displayAll()'>Display All</button><p>" + amount_left + " items to complete</p>";
+      todoFooter.innerHTML = "<div id='footer-buttons'><button class='display-completed' onclick='displayCompleted()'>Display Completed</button><button class='display-uncompleted' onclick='displayUncompleted()'>Display Uncompleted</button><button class='display-all' onclick='displayAll()'>Display All</button><p id='counter'>" + amount_left + " items to complete</p></div>";
     }
     todosList.appendChild(todoFooter);
   }
