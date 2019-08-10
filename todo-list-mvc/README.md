@@ -1,5 +1,5 @@
 
-Implementation of http://todomvc.com/
+Implementation of http://todomvc.com/ using HTML, CSS, JavaScript
 
 To add:
   - fix formatting problems
